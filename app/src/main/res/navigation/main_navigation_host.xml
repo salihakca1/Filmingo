@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_host"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.HomePageFragment"
+        android:label="HomePageFragment" >
+        <action
+            android:id="@+id/action_homePageFragment_to_detailPageFragment"
+            app:destination="@id/detailPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPageFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.DetailPageFragment"
+        android:label="fragment_detail_page"
+        tools:layout="@layout/fragment_detail_page" >
+        <argument
+            android:name="movie"
+            app:argType="com.salihakca2.zmovieapp.data.entity.Result" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvPageFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.TvPageFragment"
+        android:label="fragment_tv_page"
+        tools:layout="@layout/fragment_tv_page" >
+        <action
+            android:id="@+id/action_tvPageFragment_to_tvDetailFragment"
+            app:destination="@id/tvDetailFragment" />
+        <action
+            android:id="@+id/action_tvPageFragment_to_detailTodayTvFragment"
+            app:destination="@id/detailTodayTvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/releasePageFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.ReleasePageFragment"
+        android:label="ReleasePageFragment" >
+        <action
+            android:id="@+id/action_releasePageFragment_to_releaseDetailFragment"
+            app:destination="@id/releaseDetailFragment" />
+        <action
+            android:id="@+id/action_releasePageFragment_to_releaseDetailTvFragment"
+            app:destination="@id/releaseDetailTvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/releaseDetailFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.ReleaseDetailFragment"
+        android:label="ReleaseDetailFragment" >
+        <argument
+            android:name="releaseMovie"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXX"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/releaseDetailTvFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.ReleaseDetailTvFragment"
+        android:label="ReleaseDetailTvFragment" >
+        <argument
+            android:name="releaseTv"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXXX" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvDetailFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.TvDetailFragment"
+        android:label="TvDetailFragment" >
+        <argument
+            android:name="popularTvObject"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXXXX" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTodayTvFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.DetailTodayTvFragment"
+        android:label="fragment_detail_today_tv"
+        tools:layout="@layout/fragment_detail_today_tv" >
+        <argument
+            android:name="todayTvObject"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXXXXX" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRatedFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.TopRatedFragment"
+        android:label="TopRatedFragment" >
+        <action
+            android:id="@+id/action_topRatedFragment_to_detailTopRatedMovieFragment"
+            app:destination="@id/detailTopRatedMovieFragment" />
+        <action
+            android:id="@+id/action_topRatedFragment_to_detailTopRatedTvFragment"
+            app:destination="@id/detailTopRatedTvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTopRatedMovieFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.DetailTopRatedMovieFragment"
+        android:label="DetailTopRatedMovieFragment" >
+        <argument
+            android:name="topRatedMovie"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXXXXXXX" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTopRatedTvFragment"
+        android:name="com.salihakca2.zmovieapp.ui.fragment.DetailTopRatedTvFragment"
+        android:label="DetailTopRatedTvFragment" >
+        <argument
+            android:name="topRatedTv"
+            app:argType="com.salihakca2.zmovieapp.data.entity.ResultXXXXXXXX" />
+    </fragment>
+</navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_movie"
+        android:title="Filmler"
+        app:cnb_iconColor = "#03A9F4"
+        android:icon="@drawable/ic_baseline_movie_24"
+
+        />
+
+    <item
+        android:id="@+id/nav_release"
+        android:title="Yayınlanacaklar"
+        app:cnb_iconColor = "#E176DB"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        />
+
+    <item
+        android:id="@+id/nav_tv"
+        android:title="Televizyon"
+        app:cnb_iconColor = "#E91E63"
+        android:icon="@drawable/ic_baseline_videocam_24"
+        />
+
+    <item
+        android:id="@+id/nav_tdmb"
+        android:title="TMDB' de"
+        android:icon="@drawable/ic_baseline_star_rate_24"
+        app:cnb_iconColor = "#31E4C9"
+        />
+</menu>
